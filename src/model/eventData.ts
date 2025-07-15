@@ -91,6 +91,8 @@ export interface IAuthenticationData {
   // organizationId added later, not in client
   organizationId?: string;
   isSupporter?: boolean;
+  camURL: string | undefined;
+  camPassword: string | undefined;
 }
 
 //#region Auxiliary data
@@ -100,6 +102,8 @@ export interface IAuxAuthenticationData {
   name: string;
   matchId: string;
   playerId: string;
+  camURL: string | undefined;
+  camPassword: string | undefined;
 }
 
 export interface IFormattedAuxiliary {

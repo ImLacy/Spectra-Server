@@ -213,6 +213,9 @@ export class WebsocketIncoming {
           user.groupCode = groupCode;
           user.isAuxiliary = true;
           user.playerId = authenticationData.playerId;
+          user.camURL = authenticationData.camURL
+          user.camPassword = authenticationData.camPassword
+
           WebsocketIncoming.authedClients.push(user);
 
           Log.info(
@@ -300,6 +303,8 @@ class ClientUser {
   isAuxiliary: boolean = false;
   playerId: string = "";
   ws: Socket;
+  camURL: string | undefined;
+  camPassword: string | undefined;
 
   constructor(name: string, groupCode: string, ws: Socket) {
     this.name = name;
